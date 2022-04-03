@@ -36,3 +36,4 @@ def count(board):
             elif board[i][j] == O:
                 count_o += 1
     return count_x, count_o
+    
