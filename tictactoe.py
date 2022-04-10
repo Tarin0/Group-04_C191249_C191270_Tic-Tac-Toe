@@ -36,4 +36,20 @@ def count(board):
             elif board[i][j] == O:
                 count_o += 1
     return count_x, count_o
-    
+
+#______________________________________________________________________________________________________________________________________#
+
+# 3. Player:
+# Track the moves. Returns player who has the next turn on board.
+
+
+def player(board):
+    count_x, count_o = count(board)
+    if count_o + count_x == 0:
+        return X
+    elif count_x > count_o and count_x + count_o != 9:
+        return O
+    elif count_x == count_o and count_x + count_o != 9:
+        return X
+    elif count_x + count_o == 9:
+        return X

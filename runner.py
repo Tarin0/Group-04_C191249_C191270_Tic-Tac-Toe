@@ -3,7 +3,7 @@ import sys
 import time
 
 import tictactoe as ttt
-import os 
+import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 pygame.init()
@@ -30,3 +30,12 @@ while True:
             sys.exit()
 
     screen.fill(black)
+
+    # Let user choose a player.
+    if user is None:
+
+        # Draw title
+        title = largeFont.render("Play Tic-Tac-Toe", True, white)
+        titleRect = title.get_rect()
+        titleRect.center = ((width / 2), 50)
+        screen.blit(title, titleRect)
