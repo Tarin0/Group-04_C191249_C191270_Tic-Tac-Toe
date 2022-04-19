@@ -53,3 +53,16 @@ def player(board):
         return X
     elif count_x + count_o == 9:
         return X
+
+#______________________________________________________________________________________________________________________________________#
+
+# 4. Actions:
+# In each state, returns the set of all possible actions (i, j) available on the board.
+
+def actions(board):
+    action = []
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == EMPTY:
+                action.append((i, j))
+    return action
